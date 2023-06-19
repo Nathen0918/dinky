@@ -274,6 +274,11 @@ public class TaskServiceImpl extends SuperServiceImpl<TaskMapper, Task> implemen
             return;
         }
 
+
+
+
+
+
         DockerClientUtils dockerClientUtils = new DockerClientUtils(docker);
         if (StrUtil.isNotBlank(dockerClientUtils.getImage())) {
             gatewayConfig.getFlinkConfig().getConfiguration().put("kubernetes.container.image",
